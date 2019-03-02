@@ -5,15 +5,15 @@ function GetSum( a,b )
    }
    
    let sum = 0
-
+   let high = b
+   let low = a
+   
    if (a > b) {
-       for(let i = b; i <= a; i++) {
-           sum += i
-       }
-       return sum
+       high = a
+       low = b
    }
 
-   for(let i = a; i <= b; i++) {
+   for(let i = low; i <= high; i++) {
        sum += i
    }
    return sum
